@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">FragmentFrame</string>
+
+    <!-- 通用设置 -->
     <string name="title_first">功能</string>
     <string name="title_two">查询</string>
     <string name="title_three">设置</string>
+    <string name="title_unsend">未发数：</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

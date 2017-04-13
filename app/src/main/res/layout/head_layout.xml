@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.design.widget.AppBarLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,13 +17,21 @@
 
         <TextView
             android:id="@+id/tv_unsend"
-            android:text="未发数："
-            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="end|center"/>
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/x10"
+            android:text="100"
+            android:textColor="@color/colorAccent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/title_unsend"
+            android:textColor="@color/colorAccent"
+            />
 
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>
