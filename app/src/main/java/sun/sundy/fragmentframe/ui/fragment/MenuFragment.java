@@ -4,17 +4,15 @@ package sun.sundy.fragmentframe.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
-import me.yokeyword.fragmentation.SupportFragment;
 import sun.sundy.fragmentframe.R;
 import sun.sundy.fragmentframe.ui.base.BaseMenuFragment;
 import sun.sundy.fragmentframe.ui.fragment.biz.BizMenuFragment;
 import sun.sundy.fragmentframe.ui.fragment.query.QueryMenuFragment;
 import sun.sundy.fragmentframe.ui.fragment.setting.SettingMenuFragment;
+import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
 import sun.sundy.fragmentframe.view.BottomTabView;
 
 /**
@@ -31,23 +29,24 @@ public class MenuFragment extends BaseMenuFragment {
     private int selectedID;
     private int prePosition;
 
-    private SupportFragment[] mFragments = new SupportFragment[3];
+    private RxSupportFragment[] mFragments = new RxSupportFragment[3];
 
 
     public static MenuFragment newInstance() {
-
         Bundle args = new Bundle();
-
         MenuFragment fragment = new MenuFragment();
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+    protected int setInflaterView() {
+        return R.layout.fragment_menu;
+    }
 
+    @Override
+    protected void initView(View view, Bundle savedInstanceState) {
+        //        EventBus.getDefault().register(this);
         if (savedInstanceState == null) {
             mFragments[FIRST] = BizMenuFragment.newInstance();
             mFragments[SECOND] = QueryMenuFragment.newInstance();
@@ -63,12 +62,6 @@ public class MenuFragment extends BaseMenuFragment {
             mFragments[THIRD] = findChildFragment(SettingMenuFragment.class);
         }
 
-        initView(view);
-        return view;
-    }
-
-    private void initView(View view) {
-//        EventBus.getDefault().register(this);
         BottomTabView navigation = (BottomTabView) view.findViewById(R.id.navigation);
         selectedID = navigation.getSelectedItemId();
         switch (selectedID) {
@@ -112,6 +105,11 @@ public class MenuFragment extends BaseMenuFragment {
 //                EventBus.getDefault().post(new TabSelectedEvent(item.getItemId()));
             }
         });
+        init();
+    }
+
+    protected void init() {
+
     }
 
     @Override

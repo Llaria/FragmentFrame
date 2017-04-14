@@ -3,15 +3,15 @@ package sun.sundy.fragmentframe.ui.activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import me.yokeyword.fragmentation.SupportActivity;
-import me.yokeyword.fragmentation.SupportFragment;
-import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
+import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
-import me.yokeyword.fragmentation.helper.FragmentLifecycleCallbacks;
 import sun.sundy.fragmentframe.R;
 import sun.sundy.fragmentframe.ui.fragment.MenuFragment;
+import sun.sundy.fragmentframe.utils.myFragment.FragmentLifecycleCallbacks;
+import sun.sundy.fragmentframe.utils.myFragment.RxSupportActivity;
+import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
 
-public class MenuActivity extends SupportActivity {
+public class MenuActivity extends RxSupportActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,12 @@ public class MenuActivity extends SupportActivity {
         registerFragmentLifecycleCallbacks(new FragmentLifecycleCallbacks() {
 
             @Override
-            public void onFragmentSupportVisible(SupportFragment fragment) {
+            public void onFragmentSupportVisible(RxSupportFragment fragment) {
                 Log.i("MainActivity", "onFragmentSupportVisible--->" + fragment.getClass().getSimpleName());
             }
 
             @Override
-            public void onFragmentCreated(SupportFragment fragment, Bundle savedInstanceState) {
+            public void onFragmentCreated(RxSupportFragment fragment, Bundle savedInstanceState) {
                 super.onFragmentCreated(fragment, savedInstanceState);
             }
             // 省略其余生命周期方法
@@ -46,8 +46,9 @@ public class MenuActivity extends SupportActivity {
 
     @Override
     public FragmentAnimator onCreateFragmentAnimator() {
-        // 设置横向(和安卓4.x动画相同)
-        return new DefaultHorizontalAnimator();
+        return new DefaultNoAnimator();
+//        return new DefaultHorizontalAnimator();
+//        return super.onCreateFragmentAnimator();
     }
 
 

@@ -2,38 +2,33 @@ package sun.sundy.fragmentframe.ui.fragment.query;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import sun.sundy.fragmentframe.R;
 import sun.sundy.fragmentframe.ui.base.BaseMenuFragment;
 
 /**
- * A simple {@link Fragment} subclass.
+ * 查询主菜单
+ * @author Sundy
+ * create at 2017/4/14 9:26
  */
 public class QueryMenuFragment extends BaseMenuFragment {
 
-
-    public QueryMenuFragment() {
-        // Required empty public constructor
-    }
-
     public static QueryMenuFragment newInstance() {
-
         Bundle args = new Bundle();
-
         QueryMenuFragment fragment = new QueryMenuFragment();
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_query_menu, container, false);
+    protected int setInflaterView() {
+        return R.layout.fragment_query_menu;
+    }
+
+    @Override
+    protected void initView(View view, Bundle savedInstanceState) {
+        setTitleName("查询菜单");
     }
 
 }
