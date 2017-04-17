@@ -19,7 +19,7 @@ import sun.sundy.fragmentframe.view.BottomTabView;
  * Fragment主界面
  *
  * @author Sundy
- *         create at 2017/4/13 15:59
+ * create at 2017/4/13 15:59
  */
 public class MenuFragment extends BaseMenuFragment {
 

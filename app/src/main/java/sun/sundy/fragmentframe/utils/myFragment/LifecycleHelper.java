@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 
 /**
+ * Fragment生命周期
  * Created by sundi on 2017/4/14.
  */
 

@@ -3,6 +3,7 @@ package sun.sundy.fragmentframe.utils.myFragment;
 import android.os.Bundle;
 
 /**
+ * Fragment生命周期监控的回调方法
  * Created by sundi on 2017/4/14.
  */
 
