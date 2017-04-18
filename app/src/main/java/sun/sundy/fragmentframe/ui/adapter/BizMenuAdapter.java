@@ -25,14 +25,14 @@ public class BizMenuAdapter extends AbsCommonAdapter<MenuEntity> {
 
     public BizMenuAdapter(@NonNull List<MenuEntity> items, Context context) {
         super(items,  R.layout.item_menu);
-        height= WindowUtils.getWindowWidth(context);
+        height= WindowUtils.getWindowHeight(context);
     }
 
     @Override
     public void convert(ViewHolder holder, MenuEntity item, int position) {
         LinearLayout viewGroup = holder.getView(R.id.itemParent);
         ViewGroup.LayoutParams layoutParams = viewGroup.getLayoutParams();
-        layoutParams.height = height/3 + 13;
+        layoutParams.height = height/5;
         ImageView imageView = holder.getView(R.id.img_icon);
         imageView.setImageResource(item.getIcon());
 

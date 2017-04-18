@@ -10,13 +10,10 @@ import android.util.DisplayMetrics;
  */
 public class WindowUtils {
 
-    public static int getWindowWidth(Context context){
+    public static int getWindowHeight(Context context){
         Resources resources = context.getResources();
         DisplayMetrics dm = resources.getDisplayMetrics();
-        float density1 = dm.density;
-        int width3 = dm.widthPixels;
-        int height3 = dm.heightPixels;
-        return width3;
+        return dm.heightPixels;
     }
 
 

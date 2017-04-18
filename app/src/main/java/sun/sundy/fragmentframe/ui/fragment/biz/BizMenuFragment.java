@@ -52,17 +52,15 @@ public class BizMenuFragment extends BaseMenuFragment {
         menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.class));
         menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.class));
         menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
+        menuEntities.add(new MenuEntity("[1]收货", R.mipmap.ic_launcher, NextFragment.class));
+        menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.class));
+        menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.class));
+        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
+        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
 
 
         BizMenuAdapter mainMenuAdapter = new BizMenuAdapter(menuEntities, getActivity());
         bizGridView.setAdapter(mainMenuAdapter);
-        /*Button button = (Button) view.findViewById(R.id.btn_next);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EventBus.getDefault().post(new StartBrotherEvent(NextFragment.newInstance()));
-            }
-        });*/
     }
 
     @OnItemClick(R.id.biz_gridView)
