@@ -16,12 +16,7 @@ import com.trello.rxlifecycle.components.support.RxFragment;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import me.yokeyword.fragmentation.anim.FragmentAnimator;
-import me.yokeyword.fragmentation.helper.internal.AnimatorHelper;
-import me.yokeyword.fragmentation.helper.internal.LifecycleHelper;
-import me.yokeyword.fragmentation.helper.internal.OnFragmentDestoryViewListener;
-import me.yokeyword.fragmentation.helper.internal.ResultRecord;
-import me.yokeyword.fragmentation.helper.internal.TransactionRecord;
+
 
 /**
  *

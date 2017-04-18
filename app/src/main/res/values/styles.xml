@@ -28,4 +28,12 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <!-- 通用cardview样式属性 -->
+    <style name="CardView.CommonStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x60</item>
+    </style>
+
 </resources>

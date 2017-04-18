@@ -7,7 +7,6 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-import me.yokeyword.fragmentation.helper.internal.TransactionRecord;
 
 /**
  * Created by sundi on 2017/4/14.

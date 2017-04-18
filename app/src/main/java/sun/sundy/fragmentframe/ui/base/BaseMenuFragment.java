@@ -11,6 +11,7 @@ import android.widget.Toast;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import butterknife.ButterKnife;
 import sun.sundy.fragmentframe.R;
 import sun.sundy.fragmentframe.event.StartBrotherEvent;
 import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
@@ -33,6 +34,7 @@ public abstract class BaseMenuFragment extends RxSupportFragment {
         View view = inflater.inflate(setInflaterView(), container, false);
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
         EventBus.getDefault().register(this);
+        ButterKnife.bind(this,view);
         initView(view,savedInstanceState);
         return view;
     }
@@ -79,5 +81,6 @@ public abstract class BaseMenuFragment extends RxSupportFragment {
     public void onDestroyView() {
         super.onDestroyView();
         EventBus.getDefault().unregister(this);
+        ButterKnife.unbind(this);
     }
 }

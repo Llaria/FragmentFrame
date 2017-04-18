@@ -7,10 +7,15 @@
 
     <include layout="@layout/head_layout"/>
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+   <GridView
+       android:id="@+id/biz_gridView"
+       android:padding="@dimen/x5"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:horizontalSpacing="@dimen/x5"
+       android:numColumns="3"
+       android:verticalSpacing="@dimen/x5">
+
+   </GridView>
 
 </LinearLayout>

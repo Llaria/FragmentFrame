@@ -17,9 +17,6 @@ import java.util.List;
 
 import me.yokeyword.fragmentation.debug.DebugFragmentRecord;
 import me.yokeyword.fragmentation.debug.DebugHierarchyViewContainer;
-import me.yokeyword.fragmentation.helper.internal.OnFragmentDestoryViewListener;
-import me.yokeyword.fragmentation.helper.internal.ResultRecord;
-import me.yokeyword.fragmentation.helper.internal.TransactionRecord;
 
 /**
  * Fragment代理，用于处理宿主Activity和Fragment操作
@@ -793,7 +790,6 @@ public class RxFragmentDelegate {
 
     private List<DebugFragmentRecord> getChildFragmentRecords(Fragment parentFragment) {
         List<DebugFragmentRecord> fragmentRecords = new ArrayList<>();
-
         List<Fragment> fragmentList = parentFragment.getChildFragmentManager().getFragments();
         if (fragmentList == null || fragmentList.size() < 1) return null;
 

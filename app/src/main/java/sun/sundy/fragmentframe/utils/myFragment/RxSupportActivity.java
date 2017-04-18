@@ -18,8 +18,6 @@ import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.util.ArrayList;
 
-import me.yokeyword.fragmentation.anim.DefaultVerticalAnimator;
-import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import me.yokeyword.fragmentation.debug.StackViewTouchListener;
 import sun.sundy.fragmentframe.R;
 

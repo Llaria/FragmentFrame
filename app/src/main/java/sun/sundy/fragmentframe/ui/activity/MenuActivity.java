@@ -3,10 +3,10 @@ package sun.sundy.fragmentframe.ui.activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
-import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import sun.sundy.fragmentframe.R;
 import sun.sundy.fragmentframe.ui.fragment.MenuFragment;
+import sun.sundy.fragmentframe.utils.myFragment.DefaultNoAnimator;
+import sun.sundy.fragmentframe.utils.myFragment.FragmentAnimator;
 import sun.sundy.fragmentframe.utils.myFragment.FragmentLifecycleCallbacks;
 import sun.sundy.fragmentframe.utils.myFragment.RxSupportActivity;
 import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
