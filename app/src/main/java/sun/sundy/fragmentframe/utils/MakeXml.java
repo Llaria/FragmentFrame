@@ -20,6 +20,7 @@ public class MakeXml {
     private final static String HTemplate = "<dimen name=\"y{0}\">{1}px</dimen>\n";
 
     public static void main(String[] args) {
+        makeString(240, 320);
         makeString(320, 480);
         makeString(480, 800);
         makeString(480, 854);

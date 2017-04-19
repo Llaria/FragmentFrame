@@ -1,16 +1,18 @@
 package sun.sundy.fragmentframe.entity;
 
+import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
+
 /**
- * 业务菜单GridView
+ * 菜单GridView
  * @author Sundy
  * create at 2017/4/18 16:39
  */
 public class MenuEntity {
     String name;
     int icon;
-    Class mClass;
+    RxSupportFragment mClass;
 
-    public MenuEntity(String name, int icon, Class mClass) {
+    public MenuEntity(String name, int icon, RxSupportFragment mClass) {
         this.name = name;
         this.icon = icon;
         this.mClass = mClass;
@@ -32,11 +34,11 @@ public class MenuEntity {
         this.icon = icon;
     }
 
-    public Class getmClass() {
+    public RxSupportFragment getmClass() {
         return mClass;
     }
 
-    public void setmClass(Class mClass) {
+    public void setmClass(RxSupportFragment mClass) {
         this.mClass = mClass;
     }
 }

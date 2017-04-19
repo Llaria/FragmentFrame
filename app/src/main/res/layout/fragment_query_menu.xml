@@ -7,4 +7,14 @@
 
     <include layout="@layout/head_layout"/>
 
+    <GridView
+        android:id="@+id/query_gridView"
+        android:padding="@dimen/x5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/x5"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/x5">
+    </GridView>
+
 </LinearLayout>

@@ -18,6 +18,7 @@ import sun.sundy.fragmentframe.entity.MenuEntity;
 import sun.sundy.fragmentframe.event.StartBrotherEvent;
 import sun.sundy.fragmentframe.ui.adapter.BizMenuAdapter;
 import sun.sundy.fragmentframe.ui.base.BaseMenuFragment;
+import sun.sundy.fragmentframe.utils.myFragment.RxSupportFragment;
 
 /**
  * 业务功能主菜单
@@ -48,16 +49,15 @@ public class BizMenuFragment extends BaseMenuFragment {
     protected void initView(View view, Bundle savedInstanceState) {
         setTitleName("业务菜单");
 
-        menuEntities.add(new MenuEntity("[1]收货", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[1]收货", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
-        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.class));
-
+        menuEntities.add(new MenuEntity("[1]收货", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[1]收货", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[2]装车", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[3]卸车", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.newInstance()));
+        menuEntities.add(new MenuEntity("[4]派件", R.mipmap.ic_launcher, NextFragment.newInstance()));
 
         BizMenuAdapter mainMenuAdapter = new BizMenuAdapter(menuEntities, getActivity());
         bizGridView.setAdapter(mainMenuAdapter);
@@ -66,13 +66,12 @@ public class BizMenuFragment extends BaseMenuFragment {
     @OnItemClick(R.id.biz_gridView)
     void onItemClick(int position) {
         MenuEntity menuEntity = menuEntities.get(position);
-        Class aClass = menuEntity.getmClass();
+        RxSupportFragment aClass = menuEntity.getmClass();
         if (null != aClass) {
             EventBus.getDefault().post(new StartBrotherEvent(NextFragment.newInstance()));
         } else {
             Toast.makeText(_mActivity, "[" + menuEntity.getName() + "]" + "暂未开发！", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     @Override

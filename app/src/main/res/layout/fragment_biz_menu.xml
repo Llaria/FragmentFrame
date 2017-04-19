@@ -15,7 +15,6 @@
        android:horizontalSpacing="@dimen/x5"
        android:numColumns="3"
        android:verticalSpacing="@dimen/x5">
-
    </GridView>
 
 </LinearLayout>

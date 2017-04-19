@@ -36,6 +36,7 @@ public class MenuActivity extends RxSupportActivity {
             }
             // 省略其余生命周期方法
         });
+
     }
 
     @Override

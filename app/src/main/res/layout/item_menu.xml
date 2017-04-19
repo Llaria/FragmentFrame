@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/CardView.CommonStyle"
+    android:foreground="?android:attr/selectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/itemParent"
     android:clickable="false"
-    android:padding="@dimen/x10"
     app:cardCornerRadius="@dimen/x8">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/itemParent">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/img_icon"
